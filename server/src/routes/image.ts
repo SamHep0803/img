@@ -72,6 +72,6 @@ imageApi.post("/upload", async (c) => {
 	await client.send(command);
 
 	return c.json({
-		image: `${process.env.SERVICE_URL ?? "http://localhost:3000/image/"}${fullPath}`,
+		image: `${process.env.SERVICE_URL ?? "http://localhost:3000"}/image/${fullPath}`,
 	});
 });
